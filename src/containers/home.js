@@ -1,20 +1,34 @@
 import { Button } from 'semantic-ui-react';
 import React from 'react';
+// import Post from '../components/post';
+// import {
+//     BrowserRouter as Router,
+//     Route
+//     // Link,
+//     // Switch
+// } from 'react-router-dom';
+import Blog from './blog';
 
-function Home(props) {
-    
-    return  <div>
-                <header className="App-header">
-                    We Making Sites Boi!
+class Home extends React.Component {
+
+    render() {
+
+        return  <div className="App-header">
+
+                    <header>
+                        We Making Sites Boi!
+                    </header>
+
                     <p>
                         <Button color='black' content='Dope' icon={{ color: 'blue', name: 'like' }} />
                     </p>
                     <p>
-                        <Button icon={{ as: 'i', className: 'my-icon' }} />
+                        <Blog />
                     </p>
-                </header>
-            </div>
 
+                </div>
+
+        }
     }
 
 export default Home;
