@@ -4,6 +4,13 @@ import React from 'react';
 
 class ArticlePreview extends React.Component {
 
+    removeTags = (str) => {
+        if ((str===null) || (str===''))
+            return false;
+        else
+        str = str.toString();
+        return str.replace( /(<([^>]+)>)/ig, '');
+    }
     
     render() {
 
@@ -30,7 +37,7 @@ class ArticlePreview extends React.Component {
 
                     <h1 className="text-center"> {this.props.post.title} </h1>
 
-                    <div className="content"> {this.props.post.excerpt} </div>
+                    <div className="content"> {this.removeTags(this.props.post.excerpt)} </div>
                 </a>
 
                 <Link to={`/blog/${this.props.post.ID}`}>

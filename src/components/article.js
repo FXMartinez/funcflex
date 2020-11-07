@@ -1,6 +1,6 @@
 // import React from 'react';
 
-function Post (props) {
+function Article (props) {
     
     return  <div className='wp-post'>
                 <h1>wordpress checker</h1>
@@ -11,4 +11,4 @@ function Post (props) {
             </div>
 }
 
-export default Post;
+export default Article;

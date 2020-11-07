@@ -1,6 +1,6 @@
 import { Button } from 'semantic-ui-react';
 import React from 'react';
-// import Post from '../components/post';
+// import Article from '../components/article';
 // import {
 //     BrowserRouter as Router,
 //     Route
@@ -10,6 +10,14 @@ import React from 'react';
 import Blog from './blog';
 
 class Home extends React.Component {
+
+    removeTags = (str) => {
+        if ((str===null) || (str===''))
+            return false;
+        else
+        str = str.toString();
+        return str.replace( /(<([^>]+)>)/ig, '');
+    }
 
     render() {
 
@@ -22,10 +30,9 @@ class Home extends React.Component {
                     <p>
                         <Button color='black' content='Dope' icon={{ color: 'blue', name: 'like' }} />
                     </p>
-                    <p>
+                    <div>
                         <Blog />
-                    </p>
-
+                    </div>
                 </div>
 
         }
