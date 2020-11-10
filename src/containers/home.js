@@ -1,13 +1,16 @@
 import { Button } from 'semantic-ui-react';
 import React from 'react';
+import Welcome from '../components/welcome'
 // import Article from '../components/article';
-// import {
-//     BrowserRouter as Router,
-//     Route
-//     // Link,
-//     // Switch
-// } from 'react-router-dom';
+import {
+    // BrowserRouter as Router,
+    Route,
+    Link,
+    // Redirect,
+    Switch
+} from 'react-router-dom';
 import Blog from './blog';
+import ArticlePreview from '../components/article_preview';
 
 class Home extends React.Component {
 
@@ -19,6 +22,10 @@ class Home extends React.Component {
         return str.replace( /(<([^>]+)>)/ig, '');
     }
 
+    pushUrl = () => {
+        this.props.history.push('/ArticlePreview')
+    }
+
     render() {
 
         return  <div className="App-header">
@@ -28,11 +35,37 @@ class Home extends React.Component {
                     </header>
 
                     <p>
-                        <Button color='black' content='Dope' icon={{ color: 'blue', name: 'like' }} />
+                        <Button 
+                            color='black' content='Home' 
+                            icon={{ color: 'blue', name: 'like' }}
+                            as={ Link }
+                            to='/'
+                        />
+                        <Button 
+                            color='black' content='Blog' 
+                            icon={{ color: 'red', name: 'like' }}
+                            as={ Link }
+                            to='/Blog'
+                        />
+                        <Button 
+                            color='black' content='Article' 
+                            icon={{ color: 'green', name: 'like' }}
+                            as={ Link }
+                            to='/Article'
+                        />
                     </p>
-                    <div>
-                        <Blog />
-                    </div>
+                <div>
+                    <Switch>
+
+                        <Route exact path='/' render={ () => <Welcome /> } />
+
+                        <Route exact path='/ArticlePreview' render={ () => <ArticlePreview /> } />
+
+                        <Route exact path='/Blog' render={ () => <Blog /> }/>
+
+                    </Switch>
+                </div>
+
                 </div>
 
         }

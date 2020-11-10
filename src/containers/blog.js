@@ -34,9 +34,9 @@ class Blog extends Component {
 
             <>
                 { this.state.posts.map((post) => { 
-                    return <p className='article preview'> 
+                    return <div className='article preview'> 
                                 <ArticlePreview post={post}/> 
-                            </p> 
+                            </div> 
                     }) 
                 }
             </>
