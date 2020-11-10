@@ -78,11 +78,12 @@ class Home extends React.Component {
 
                             <Route exact path='/' render={ () => <Welcome /> } />
 
-                            {/* <Route exact path='/ArticlePreview' render={ () => <ArticlePreview /> } /> */}
-
                             <Route exact path='/Blog' render={ () => <Blog getPost={this.getPost} /> }/>
 
-                            <Route exact path='Blog/:id' render={ () => <Article post={this.state.post} /> } />
+                            <Route exact path='/Blog/:id' render={ () => <Article 
+                                                                            post={this.state.post}
+                                                                            removeTags={this.removeTags}
+                                                                        /> } />
 
                         </Switch>
                     </div>

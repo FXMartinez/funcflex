@@ -8,29 +8,31 @@ class Article extends Component {
     //     post: ''
     // }
 
-    // componentDidMount() {
-    //     Axios
-    //         .get(
-    //             `http://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts/${this.props.match.params.id}`
-    //         )
-    //         .then (res => {
-    //             this.setState({ post: res.data.posts });
-    //             console.log('componentdidmount', this.state.posts);
-    //         })
-    //         .catch(error => console.log(error));
-    //     }
+    removeTags = (str) => {
+        if ((str===null) || (str===''))
+            return false;
+        else
+        str = str.toString();
+        return str.replace( /(<([^>]+)>)/ig, '');
+    }
 
     render() {
 
-        console.log('article', this.props.post)
+        // console.log('article')
       
         return (
-                <div className='wp-post'>
-                    <h1> This is a full Article </h1>
+                <div className='wp-post' key={this.props.post.ID}>
+                    <h1> {this.props.post.title} </h1>
 
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                    <p>
+                        {this.props.post.content}
+                    </p>
 
-                    <script src="getWordpress.js"></script>
+                    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+                    <script src="getWordpress.js"></script> */}
+
+
                 </div>
         );
     };
