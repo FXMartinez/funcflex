@@ -43,7 +43,7 @@ class ArticlePreview extends React.Component {
                     
                     <p>
                         <Link to={`/blog/${this.props.post.ID}`}>
-                            <button as={ Link } to='/blog/:id' onClick={ () => this.props.getPost(this.props.post.ID) }> Read More </button>
+                            <button as={ Link } to='/blog/:id' onClick={ () => this.props.getPost(this.props.post.ID) }> Read More </button>  {/* get this link and to path to work and render an article */}
                         </Link>
                     </p>
 

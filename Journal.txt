@@ -1,0 +1,3 @@
+Progress made on getting a single article to render. Created a function in home called getPost that grabs the id of the article from the read me button in <blog/>.
+it then sets state post to the article object itself. Tried getting it to render but pathing for the switch is not working. may need to change article back to a regular component instead of a class component.
+see line 46 in article preview for note.
