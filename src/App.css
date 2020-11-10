@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.content {
+  line-height: 1.2;
+}
+
+.article-preview {
+  outline-style: auto;
+  outline-color: grey;
+  outline-width: 1cm;
+}
+
+.article-preview-title {
+  text-decoration: underline;
+}

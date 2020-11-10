@@ -14,37 +14,40 @@ class ArticlePreview extends React.Component {
     
     render() {
 
-        console.log('article preview', this.props)
-
-        // return ( null );
+        console.log('article preview', this.props.post.ID)
 
         if (this.props.post) {
         
             return (
 
-                <div className='article'>
+                <div className='article-preview'>
 
-                <a href={`/blog/${this.props.post.ID}`} className="blackLink">
-                    {this.props.post.featured_image ? (
-                        <img
-                        className="img-responsive webpic"
-                        alt="article header"
-                        src={this.props.post.featured_image}
-                        />
-                        ) : (
-                        ""
-                        )}
+                    <a href={`/blog/${this.props.post.ID}`} className="blackLink">
+                        {this.props.post.featured_image ? (
+                            <img
+                            className="img-responsive webpic"
+                            alt="article header"
+                            src={this.props.post.featured_image}
+                            />
+                            ) : (
+                            ""
+                            )}
 
-                    <h1 className="text-center"> {this.props.post.title} </h1>
+                        <h1 className="article-preview-title"> {this.props.post.title} </h1>
 
-                    <div className="content"> {this.removeTags(this.props.post.excerpt)} </div>
-                </a>
+                        <div className="content"> 
+                            {this.removeTags(this.props.post.excerpt)} 
+                        </div> <br/>
 
-                <Link to={`/blog/${this.props.post.ID}`}>
-                    <button className="btn"> Read More </button>
-                </Link>
+                    </a>
+                    
+                    <p>
+                        <Link to={`/blog/${this.props.post.ID}`}>
+                            <button as={ Link } to='/blog/:id' onClick={ () => this.props.getPost(this.props.post.ID) }> Read More </button>
+                        </Link>
+                    </p>
 
-            </div>
+                </div>
 
             );
         } else {

@@ -1,7 +1,9 @@
 import { Button } from 'semantic-ui-react';
 import React from 'react';
 import Welcome from '../components/welcome'
-// import Article from '../components/article';
+import Axios from 'axios';
+import Article from '../components/article';
+// import ArticlePreview from '../components/article_preview';
 import {
     // BrowserRouter as Router,
     Route,
@@ -10,9 +12,25 @@ import {
     Switch
 } from 'react-router-dom';
 import Blog from './blog';
-import ArticlePreview from '../components/article_preview';
 
 class Home extends React.Component {
+
+    state = {
+        post: {}
+    }
+
+    getPost = (ID) => {
+        Axios
+            .get(
+                `http://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts/${ID}`
+            )
+            .then (res => {
+                this.setState({ post: res.data });
+                console.log('componentdidmount', this.state.post);
+            })
+            // .then(res => console.log(res.data))
+            .catch(error => console.log(error));
+    }
 
     removeTags = (str) => {
         if ((str===null) || (str===''))
@@ -30,17 +48,13 @@ class Home extends React.Component {
 
         return  <div className="App-header">
 
-                    <header>
-                        We Making Sites Boi!
-                    </header>
-
                     <p>
                         <Button 
                             color='black' content='Home' 
                             icon={{ color: 'blue', name: 'like' }}
                             as={ Link }
                             to='/'
-                        />
+                            />
                         <Button 
                             color='black' content='Blog' 
                             icon={{ color: 'red', name: 'like' }}
@@ -52,19 +66,26 @@ class Home extends React.Component {
                             icon={{ color: 'green', name: 'like' }}
                             as={ Link }
                             to='/Article'
-                        />
+                            />
                     </p>
-                <div>
-                    <Switch>
 
-                        <Route exact path='/' render={ () => <Welcome /> } />
+                    <header>
+                        We Making Sites Boi!
+                    </header> <br/>
 
-                        <Route exact path='/ArticlePreview' render={ () => <ArticlePreview /> } />
+                    <div>
+                        <Switch>
 
-                        <Route exact path='/Blog' render={ () => <Blog /> }/>
+                            <Route exact path='/' render={ () => <Welcome /> } />
 
-                    </Switch>
-                </div>
+                            {/* <Route exact path='/ArticlePreview' render={ () => <ArticlePreview /> } /> */}
+
+                            <Route exact path='/Blog' render={ () => <Blog getPost={this.getPost} /> }/>
+
+                            <Route exact path='Blog/:id' render={ () => <Article post={this.state.post} /> } />
+
+                        </Switch>
+                    </div>
 
                 </div>
 

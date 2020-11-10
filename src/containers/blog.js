@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, { Component } from 'react';
+import { Switch } from 'react-router-dom';
 import ArticlePreview from '../components/article_preview';
 // import {
 //     BrowserRouter as Router,
@@ -21,24 +22,26 @@ class Blog extends Component {
             )
             .then (res => {
                 this.setState({ posts: res.data.posts });
-                console.log('componentdidmount', this.state.posts);
+                // console.log('componentdidmount', this.state.posts);
             })
             .catch(error => console.log(error));
     }
 
     render() {
 
-        console.log('after render', this.state.posts)
+        console.log('after render', this.props.getPost)
 
         return (
 
             <>
+
                 { this.state.posts.map((post) => { 
-                    return <div className='article preview'> 
-                                <ArticlePreview post={post}/> 
+                    return <div className='article preview' key={ post.ID }> 
+                                <ArticlePreview post={post} getPost={ this.props.getPost }/> 
                             </div> 
                     }) 
                 }
+
             </>
 
         )
