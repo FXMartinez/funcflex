@@ -16,24 +16,43 @@ import Blog from './blog';
 class Home extends React.Component {
 
     state = {
+        posts: [],
         post: {}
     }
 
-    getPost = (ID) => {
+    componentDidMount() {
         Axios
             .get(
-                `http://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts/${ID}`
+                "http://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts"
             )
             .then (res => {
-                this.setState({ post: res.data });
-                console.log('componentdidmount', this.state.post);
+                this.setState({ posts: res.data.posts });
+                // console.log('componentdidmount', this.state.posts);
             })
-            // .then(res => console.log(res.data))
             .catch(error => console.log(error));
     }
 
+    // getPost = (ID) => {
+    //     Axios
+    //         .get(
+    //             `http://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts/${ID}`
+    //         )
+    //         .then (res => {
+    //             this.setState({ post: res.data });
+    //             // console.log('componentdidmount', this.state.post);
+    //         })
+    //         .then(res => console.log('inside getPost', res.data))
+    //         .catch(error => console.log(error));
+    // }
+
+    getPost = (ID) => {
+        return this.state.posts.find((post) => {
+            return post.ID === ID ? this.setState({ post: {...post} }) : null
+        })
+    }
+
     removeTags = (str) => {
-        if ((str===null) || (str===''))
+        if ((str === null) || (str === ''))
             return false;
         else
         str = str.toString();
@@ -45,6 +64,8 @@ class Home extends React.Component {
     }
 
     render() {
+
+        // console.log('home rendered')
 
         return  <div className="App-header">
 
@@ -78,7 +99,11 @@ class Home extends React.Component {
 
                             <Route exact path='/' render={ () => <Welcome /> } />
 
-                            <Route exact path='/Blog' render={ () => <Blog getPost={this.getPost} /> }/>
+                            <Route exact path='/Blog' render={ () => <Blog 
+                                                                        posts={this.state.posts}
+                                                                        getPost={this.getPost}
+                                                                        removeTags={this.removeTags} 
+                                                                        /> }/>
 
                             <Route exact path='/Blog/:id' render={ () => <Article 
                                                                             post={this.state.post}

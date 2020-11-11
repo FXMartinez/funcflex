@@ -3,18 +3,10 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 class ArticlePreview extends React.Component {
-
-    removeTags = (str) => {
-        if ((str===null) || (str===''))
-            return false;
-        else
-        str = str.toString();
-        return str.replace( /(<([^>]+)>)/ig, '');
-    }
     
     render() {
 
-        console.log('article preview', this.props.post.ID)
+        // console.log('article preview rendered', this.props)
 
         if (this.props.post) {
         
@@ -23,20 +15,20 @@ class ArticlePreview extends React.Component {
                 <div className='article-preview'>
 
                     <a href={`/blog/${this.props.post.ID}`} className="blackLink">
-                        {this.props.post.featured_image ? (
-                            <img
+                        {this.props.post.featured_image 
+                        ?
+                         (  <img
                             className="img-responsive webpic"
                             alt="article header"
                             src={this.props.post.featured_image}
                             />
-                            ) : (
-                            ""
-                            )}
+                            ) 
+                        : ( "" ) }
 
                         <h1 className="article-preview-title"> {this.props.post.title} </h1>
 
                         <div className="content"> 
-                            {this.removeTags(this.props.post.excerpt)} 
+                            {this.props.removeTags(this.props.post.excerpt)} 
                         </div> <br/>
 
                     </a>
