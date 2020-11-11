@@ -1,10 +1,7 @@
-// import React from 'react';
+import React from "react";
+import ArticleContent from "./article_content";
 
-import { Component } from "react";
-
-// import { Component } from "react";
-
-class Article extends Component {
+class Article extends React.Component {
 
     state = {
         content: ''
@@ -23,13 +20,11 @@ class Article extends Component {
             <div className='wp-post' key={this.props.post.ID}>
                     <h1> { this.props.post.title } </h1>
 
-                    <p>
-                        {/* {props.post} */}
-                    </p>
-                    <p>
-                        { this.props.removeTags(this.props.post.content) }
+                    <div className='post-body'>
 
-                    </p>
+                        <ArticleContent removeTags={this.props.removeTags} content={ this.state.content } />
+
+                    </div>
 
                 </div>
         );

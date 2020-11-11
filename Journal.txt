@@ -31,3 +31,6 @@ post.content
 Temporarily solved the problem for article by adding this.props.post.content to state via componentDidMount on line 13 of article.js component. Should be a better solution to this I should
 figure out.
 
+*EUREKA after creating a new component called article content, it solved the issue of props.post.content returning undefined when used inside of the remove tags function. However I found a
+solution that made the function itself obsolete and instead eseentially 'imports' and renders the html from the wordpress api keeping the styling and the image tags.
+example: <div dangerouslySetInnerHTML={{__html: html.content.here}} />

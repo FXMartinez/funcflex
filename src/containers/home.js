@@ -3,12 +3,9 @@ import React from 'react';
 import Welcome from '../components/welcome'
 import Axios from 'axios';
 import Article from '../components/article';
-// import ArticlePreview from '../components/article_preview';
 import {
-    // BrowserRouter as Router,
     Route,
     Link,
-    // Redirect,
     Switch
 } from 'react-router-dom';
 import Blog from './blog';
