@@ -65,27 +65,29 @@ class Home extends React.Component {
         // console.log('home rendered')
 
         return  <div className="App-header">
-
-                    <p>
-                        <Button 
-                            color='black' content='Home' 
-                            icon={{ color: 'blue', name: 'like' }}
-                            as={ Link }
-                            to='/'
+            
+                    <div className='nav'>
+                        <p>
+                            <Button 
+                                color='black' content='Home' 
+                                icon={{ color: 'blue', name: 'like' }}
+                                as={ Link }
+                                to='/'
+                                />
+                            <Button 
+                                color='black' content='Blog' 
+                                icon={{ color: 'red', name: 'like' }}
+                                as={ Link }
+                                to='/Blog'
                             />
-                        <Button 
-                            color='black' content='Blog' 
-                            icon={{ color: 'red', name: 'like' }}
-                            as={ Link }
-                            to='/Blog'
-                        />
-                        <Button 
-                            color='black' content='Article' 
-                            icon={{ color: 'green', name: 'like' }}
-                            as={ Link }
-                            to='/Article'
-                            />
-                    </p>
+                            <Button 
+                                color='black' content='Article' 
+                                icon={{ color: 'green', name: 'like' }}
+                                as={ Link }
+                                to='/Article'
+                                />
+                        </p>
+                    </div>
 
                     <header>
                         We Making Sites Boi!
