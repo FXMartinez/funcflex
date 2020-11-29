@@ -1,9 +1,9 @@
-11/9/2020 ***************************************************************************************************
+11/9/2020 **********************************************************************************************************
 Progress made on getting a single article to render. Created a function in home called getPost that grabs the id of the article from the read me button in <blog/>.
 it then sets state post to the article object itself. Tried getting it to render but pathing for the switch is not working. may need to change article back to a regular component instead of a class component.
 see line 46 in article preview for note.
 
-11/10/2020 **************************************************************************************************
+11/10/2020 *********************************************************************************************************
 *mistake made on line 85 with the path, wrote 'Blog/:id' instead of '/Blog/:id'
 
 Article component now renders
@@ -27,7 +27,7 @@ retrieve a single post.
 changing the get post to pull from the state posts instead of making another call to the api didnt change the outcome, the function removetags still returns undefined when used on the
 post.content
 
-11/11/2020 **************************************************************************************************
+11/11/2020 *********************************************************************************************************
 Temporarily solved the problem for article by adding this.props.post.content to state via componentDidMount on line 13 of article.js component. Should be a better solution to this I should
 figure out.
 
@@ -35,4 +35,4 @@ figure out.
 solution that made the function itself obsolete and instead eseentially 'imports' and renders the html from the wordpress api keeping the styling and the image tags.
 example: <div dangerouslySetInnerHTML={{__html: html.content.here}} />
 
-11/17/2020 ***************************************************************************************************
+11/29/2020 **********************************************************************************************************
