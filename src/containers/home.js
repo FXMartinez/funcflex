@@ -20,7 +20,7 @@ class Home extends React.Component {
     componentDidMount() {
         Axios
             .get(
-                "http://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts"
+                "https://public-api.wordpress.com/rest/v1/sites/dopeshift.wordpress.com/posts"
             )
             .then (res => {
                 this.setState({ posts: res.data.posts });
