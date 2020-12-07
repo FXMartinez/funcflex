@@ -1,13 +1,13 @@
-import { Button } from 'semantic-ui-react';
+// import { Button } from 'semantic-ui-react';
 import React from 'react';
 import Welcome from '../components/welcome'
 import Axios from 'axios';
 import Article from '../components/article';
 import Blog from './blog';
-import NavBar from '../components/nav_bar'
+// import NavBar from '../components/nav_bar'
 import {
     Route,
-    Link,
+    // Link,
     Switch
 } from 'react-router-dom';
 
@@ -65,37 +65,9 @@ class Home extends React.Component {
 
         // console.log('home rendered')
 
-        return  <div className="App-header">
-            
-                    {/* <div className='nav'>
-                        <p>
-                            <Button 
-                                color='black' content='Home' 
-                                icon={{ color: 'blue', name: 'like' }}
-                                as={ Link }
-                                to='/'
-                                />
-                            <Button 
-                                color='black' content='Blog' 
-                                icon={{ color: 'red', name: 'like' }}
-                                as={ Link }
-                                to='/Blog'
-                            />
-                            <Button 
-                                color='black' content='Article' 
-                                icon={{ color: 'green', name: 'like' }}
-                                as={ Link }
-                                to='/Article'
-                                />
-                        </p>
-                    </div> */}
-                    <NavBar />
+        return  <div className="App-header, Body">
 
-                    <header>
-                        We Making Sites Boi!
-                    </header> <br/>
-
-                    <div>
+                    <div className="Body">
                         <Switch>
 
                             <Route exact path='/' render={ () => <Welcome /> } />

@@ -6,6 +6,7 @@ function NavBar() {
     return ( 
         <div className='nav'>
             <p>
+                
                 <Button 
                     color='black' content='Home' 
                     icon={{ color: 'blue', name: 'like' }}
@@ -13,17 +14,12 @@ function NavBar() {
                     to='/'
                     />
                 <Button 
-                    color='black' content='Blog' 
+                    color='black' content='Coding' 
                     icon={{ color: 'red', name: 'like' }}
                     as={ Link }
                     to='/Blog'
                 />
-                <Button 
-                    color='black' content='Article' 
-                    icon={{ color: 'green', name: 'like' }}
-                    as={ Link }
-                    to='/Article'
-                />
+
             </p>
         </div>
 
