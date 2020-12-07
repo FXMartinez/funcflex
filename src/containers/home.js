@@ -3,12 +3,13 @@ import React from 'react';
 import Welcome from '../components/welcome'
 import Axios from 'axios';
 import Article from '../components/article';
+import Blog from './blog';
+import NavBar from '../components/nav_bar'
 import {
     Route,
     Link,
     Switch
 } from 'react-router-dom';
-import Blog from './blog';
 
 class Home extends React.Component {
 
@@ -66,7 +67,7 @@ class Home extends React.Component {
 
         return  <div className="App-header">
             
-                    <div className='nav'>
+                    {/* <div className='nav'>
                         <p>
                             <Button 
                                 color='black' content='Home' 
@@ -87,7 +88,8 @@ class Home extends React.Component {
                                 to='/Article'
                                 />
                         </p>
-                    </div>
+                    </div> */}
+                    <NavBar />
 
                     <header>
                         We Making Sites Boi!

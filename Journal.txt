@@ -36,3 +36,10 @@ solution that made the function itself obsolete and instead eseentially 'imports
 example: <div dangerouslySetInnerHTML={{__html: html.content.here}} />
 
 11/30/2020 **********************************************************************************************************
+had an issue that held me up with deploying to firebase. in the file firebase.json in the public key had a value other than build. changing the value to build allowed it to be deployed and
+visible on both the firebase serve and the hosting site funcflex.com.
+
+12/03/2020 ***********************************************************************************************************
+Decided to create an actual navbar component instead of using the placeholder buttons I initially had
+Will probably change the style and size, maybe functionality as well not sure yet. getting a weird habit from my local server where changes are not being updated. not even sure how or when
+this started to happen.
