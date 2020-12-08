@@ -34,6 +34,10 @@
   text-decoration: underline;
 }
 
+/* .article-content {
+
+} */
+
 .nav{
   text-align: center;
   position: fixed;
@@ -50,10 +54,25 @@
   top: 30px;
   text-align: center;
   width: 100%;
+  /* background-color: #282c34; */
 }
 
 .padding{
   padding: 100px;
+}
+
+.wp-post {
+  width: 80%;
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  left: 10%;
+  right: 10%;
+  outline-style: auto;
+  outline-color: grey;
+  outline-width: 1cm;
 }
 
 

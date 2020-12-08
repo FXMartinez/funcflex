@@ -1,7 +1,7 @@
 function ArticleContent(props) {
 
     return (
-        <div id='test' dangerouslySetInnerHTML={{__html: props.content}} />
+        <div id='article-preview' dangerouslySetInnerHTML={{__html: props.content}} />
     );
 }
 
