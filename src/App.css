@@ -75,6 +75,11 @@
   outline-width: 1cm;
 }
 
+img {
+  height: 80%;
+  width: 80%;
+}
+
 
   /* .App-logo {
     height: 40vmin;

@@ -43,3 +43,12 @@ visible on both the firebase serve and the hosting site funcflex.com.
 Decided to create an actual navbar component instead of using the placeholder buttons I initially had
 Will probably change the style and size, maybe functionality as well not sure yet. getting a weird habit from my local server where changes are not being updated. not even sure how or when
 this started to happen.
+
+12/07/2020 ***********************************************************************************************************
+changed some css to change the orientation of elements but lost the background color and cant seem to get it back. finished changing the nav bar from a regular div to a react component with
+styling. 
+
+*IDEA - change the styling of the entire page to mimic that of a windows CLI prompt, add a logo that starts out as Func(Flex) where flex changes to the blog name or maybe the part of the 
+pages aswell making it seem like a function with arguments. Possible add a drop down console interfact like in doom or jedi outcast games (unreal engine console?). may add functionality to
+type in specific pages like commands and navigate like a prompt.
+
