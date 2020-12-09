@@ -6,6 +6,7 @@ import NavBar from './components/nav_bar';
 import React from 'react';
 
 class App extends React.Component {
+
   state = {
     page: 'home'
   }

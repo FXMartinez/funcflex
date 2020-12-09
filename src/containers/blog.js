@@ -7,7 +7,7 @@ function Blog(props) {
         <>
 
             { props.posts.map((post) => { 
-                return <div className='article preview' key={ post.ID }> 
+                return <div key={ post.ID }> 
                             <ArticlePreview post={post} getPost={ props.getPost } removeTags={ props.removeTags } /> 
                         </div> 
                 }) 

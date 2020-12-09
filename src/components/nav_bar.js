@@ -30,14 +30,14 @@ function NavBar(props) {
                     />
                 <Button 
                     color='black' content='Coding' 
-                    icon={{ color: 'red', name: 'terminal' }}
+                    icon={{ color: 'green', name: 'terminal' }}
                     as={ Link }
                     to='/Coding'
                     onClick={()=> {props.getPage('coding')}}
                     />
                 {/* <Button
                     color='black' content='Gaming'
-                    icon={{ color: 'green', name: 'gamepad'}}
+                    icon={{ color: 'red', name: 'gamepad'}}
                     as={ Link }
                     to='/Gaming'
                     onClick={() => {props.getPage('gaming')}}

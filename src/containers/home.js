@@ -15,7 +15,7 @@ class Home extends React.Component {
 
     state = {
         posts: [],
-        post: {},
+        post: {}
     }
 
     componentDidMount() {
