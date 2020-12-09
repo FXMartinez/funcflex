@@ -7,7 +7,7 @@ import React from 'react';
 
 class App extends React.Component {
   state = {
-    page: 'Home'
+    page: 'home'
   }
 
   getCurrentPage = (currentPage) => {

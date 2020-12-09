@@ -61,4 +61,18 @@ wrote out a switch case i'll try tomorrow, see if it pans out the way I think it
 I should be able to change the url for the blog pathing without needing to change the actual components name or anything else and just use it as is for the gaming and fitness blogs.
 
 12/09/2020 *************************************************************************************************************
+Couldn't use window.location.href as on click would give me the address which would become the previous address which resulted in needing to click the button twice to get the correct 'arg'
+to show up in the site logo which doesnt work visually so I changed it to a simple string that would change on click.
+
+need to get something a little more substantial on the home page, it looks pretty blank and the rest kind of looks barren when not looking at the coding and coding posts from wordpress.
+
+semantic ui is overriding my background color and im not sure yet how to resolve this.
+
+probably not the best practice but ive used in a couple instances so far the !important tag on css elements to override the others, I need to learn more to figure it out and not need to
+use it as it creates too many conflicts so far.
+
+realized that each preview post was an entire link itself which was resulting in the blue font color I couldnt change. I should pay more attention to the coding im copying/importing from
+others. The links were also broken in the preview articles, so there was entirely no point to having them.
+
+commented out the gaming and fitness buttons until I have something to show.
 

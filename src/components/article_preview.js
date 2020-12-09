@@ -14,24 +14,27 @@ class ArticlePreview extends React.Component {
 
                 <div className='article-preview'>
 
-                    <a href={`/Coding/${this.props.post.ID}`} className="blackLink">
+                    {/* <a href={`/Coding/${this.props.post.ID}`} className="blackLink"> */}
+                    <div>
+
                         {this.props.post.featured_image 
                         ?
-                         (  <img
+                        (  <img
                             className="img-responsive webpic"
                             alt="article header"
                             src={this.props.post.featured_image}
                             />
                             ) 
-                        : ( "" ) }
+                            : ( "" ) }
 
                         <h1 className="article-preview-title"> {this.props.post.title} </h1>
 
                         <div className="content"> 
                             {this.props.removeTags(this.props.post.excerpt)} 
                         </div> <br/>
+                    </div>
 
-                    </a>
+                    {/* </a> */}
                     
                     <p>
                         <Link to={`/Coding/${this.props.post.ID}`}>

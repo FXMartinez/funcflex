@@ -22,33 +22,33 @@ function NavBar(props) {
             <div>
                 
                 <Button 
-                    color='black' content='Home' 
-                    icon={{ color: 'blue', name: 'terminal' }}
+                    color='black' content='Home'
+                    icon={{ color: 'blue', name: 'home' }}
                     as={ Link }
                     to='/'
-                    onClick={() => {props.getPage('Home')}}
+                    onClick={() => {props.getPage('home')}}
                     />
                 <Button 
                     color='black' content='Coding' 
                     icon={{ color: 'red', name: 'terminal' }}
                     as={ Link }
                     to='/Coding'
-                    onClick={()=> {props.getPage('Coding')}}
+                    onClick={()=> {props.getPage('coding')}}
                     />
-                <Button
+                {/* <Button
                     color='black' content='Gaming'
-                    icon={{ color: 'green', name: 'terminal'}}
+                    icon={{ color: 'green', name: 'gamepad'}}
                     as={ Link }
                     to='/Gaming'
-                    onClick={() => {props.getPage('Gaming')}}
+                    onClick={() => {props.getPage('gaming')}}
                     />
                 <Button
                     color='black' content='Fitness'
-                    icon={{ color: 'yellow', name: 'terminal'}}
+                    icon={{ color: 'yellow', name: 'heartbeat'}}
                     as={ Link }
                     to='/Fitness'
-                    onClick={() => {props.getPage('Fitness')}}
-                    />
+                    onClick={() => {props.getPage('fitness')}}
+                    /> */}
 
                 <Button
                     color='black'
