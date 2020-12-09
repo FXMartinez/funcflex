@@ -77,3 +77,7 @@ others. The links were also broken in the preview articles, so there was entirel
 commented out the gaming and fitness buttons until I have something to show.
 
 getting a lot of errors warnings from a syntax error originating from firebase it looks like. Looking it up it may be code from the index.html thats causing these issues.
+
+watch this video and implement it https://www.youtube.com/watch?v=-bAhg8Cmxck
+
+12/10/2020 ********************************************************************************************************************
