@@ -52,3 +52,13 @@ styling.
 pages aswell making it seem like a function with arguments. Possible add a drop down console interfact like in doom or jedi outcast games (unreal engine console?). may add functionality to
 type in specific pages like commands and navigate like a prompt.
 
+realized I have to change the blog component and everything associated with it to the coding portion or figure out how to get the same code working for the other blogs like the gaming and
+the fitness one as well. I could just be really lazy and redundant but thats never good. 
+changed a bunch of styling around the site, working on implementing putting either the button or just the word in the sites 'logo function call arg'.
+Tried a switch case, failed miserably, really need to work on fundamentals.
+
+wrote out a switch case i'll try tomorrow, see if it pans out the way I think it will.
+I should be able to change the url for the blog pathing without needing to change the actual components name or anything else and just use it as is for the gaming and fitness blogs.
+
+12/09/2020 *************************************************************************************************************
+

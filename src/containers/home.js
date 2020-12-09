@@ -72,13 +72,13 @@ class Home extends React.Component {
 
                             <Route exact path='/' render={ () => <Welcome /> } />
 
-                            <Route exact path='/Blog' render={ () => <Blog 
+                            <Route exact path='/Coding' render={ () => <Blog 
                                                                         posts={this.state.posts}
                                                                         getPost={this.getPost}
                                                                         removeTags={this.removeTags} 
                                                                         /> }/>
 
-                            <Route exact path='/Blog/:id' render={ () => <Article 
+                            <Route exact path='/Coding/:id' render={ () => <Article 
                                                                             post={this.state.post}
                                                                             removeTags={this.removeTags}
                                                                         /> } />

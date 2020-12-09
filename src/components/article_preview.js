@@ -14,7 +14,7 @@ class ArticlePreview extends React.Component {
 
                 <div className='article-preview'>
 
-                    <a href={`/blog/${this.props.post.ID}`} className="blackLink">
+                    <a href={`/Coding/${this.props.post.ID}`} className="blackLink">
                         {this.props.post.featured_image 
                         ?
                          (  <img
@@ -34,8 +34,8 @@ class ArticlePreview extends React.Component {
                     </a>
                     
                     <p>
-                        <Link to={`/blog/${this.props.post.ID}`}>
-                            <button as={ Link } to='/blog/:id' onClick={ () => this.props.getPost(this.props.post.ID) }> Read More </button>  {/* get this link and to path to work and render an article */}
+                        <Link to={`/Coding/${this.props.post.ID}`}>
+                            <button as={ Link } to='/Coding/:id' onClick={ () => this.props.getPost(this.props.post.ID) }> Read More </button>  {/* get this link and to path to work and render an article */}
                         </Link>
                     </p>
 
